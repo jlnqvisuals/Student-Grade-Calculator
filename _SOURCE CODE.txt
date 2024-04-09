@@ -1,0 +1,123 @@
+
+
+import java.util.Scanner;
+
+
+public class GroupTwo {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Constants for the grade percentage
+        final double ACT_PERCENT = 0.45;
+        final double CL_STAND_PERCENT = 0.20;
+        final double MIDTERM_EXAM_PERCENT = 0.35;
+
+        // Variables to store grades
+        double totalActivities = 0.0;
+        double totalClassStanding = 0.0;
+        double totalLabExam = 0.0;
+
+        //Front Design (Ident)
+        System.out.println("\n\n          						 ");
+        System.out.println("     ___________________________________________     ");
+        System.out.println("    | * DATA STRUCTURE MIDTERM EXAM     | _ | x |    ");
+        System.out.println("    !```````````````````````````````````````````!    ");
+        System.out.println("    |  C O L E G I O   D E   M O N T A L B A N  |    ");
+        System.out.println("    | ----------------------------------------- |    ");
+        System.out.println("    |          ________                         |    ");
+        System.out.println("    |      ___/=======/|__       _________      |    ");
+        System.out.println("    |     /______________/|    _!_______  |     |    ");
+        System.out.println("    |    |  __________   ||   |         | |     |    ");
+        System.out.println("    |    | |``````````|o ||   | ~~~~~~~ | |     |    ");
+        System.out.println("    |    | |  C D M   |o ||   | ~~~~~~~ | |     |    ");
+        System.out.println("    |    | |__________|: ||   | ~~~~.   | |     |    ");
+        System.out.println("    |    | ````````````  |/|  |         |_|     |    ");
+        System.out.println("    |   / ```````````````/ /  |    ~~~. |       |    ");
+        System.out.println("    |   [TT_________TTTT] /    `````````        |    ");
+        System.out.println("    |   [_______======__]/                      |    ");
+        System.out.println("    |                                           |    ");
+        System.out.println("    |   LABORATORY & MIDTERM GRADE CALCULATOR   |    ");
+        System.out.println("    |           CPEPROG 3 - BSCPE 2C            |    ");
+        System.out.println("    |                                           |    ");
+        System.out.println("     ```````````````````````````````````````````     ");
+
+
+        // Calculate the Activities grades
+
+        System.out.println("\n  _________________________________________________");
+
+        System.out.println("\n\n    A). LABORATORY GRADE (45%)\n");
+            for (byte i = 1; i <= 3; i++) {
+
+            System.out.print("    • ACTIVITY #" + i + ": ");
+            double actGrade = input.nextDouble();
+            totalActivities += actGrade;
+        }
+        totalActivities = (totalActivities / 3) * ACT_PERCENT;
+
+        System.out.println("\n    >> Total Activity Grade: " + (float)totalActivities) ;
+
+
+        System.out.println("\n  _________________________________________________");
+
+        // Calculate the Class Standing grade
+        System.out.println("\n\n    B.) CLASS STANDING (20%)\n");
+        System.out.print("    • ATTENDANCE: ");
+        double attendanceGrade = input.nextDouble();
+
+        System.out.print("    • ASSIGNMENT: ");
+        double assignmentGrade = input.nextDouble();
+
+        System.out.print("    • RECITATION: ");
+        double recitationGrade = input.nextDouble();
+
+        totalClassStanding = ((attendanceGrade + assignmentGrade + recitationGrade) / 3) * CL_STAND_PERCENT;
+
+        System.out.println("\n    >> Total Class Standing: " + (float)totalClassStanding);
+        System.out.println("\n  _________________________________________________");
+
+
+
+        // Calculate the Laboratory Exam grade
+        System.out.println("\n\n    C.) MIDTERM LABORATORY EXAM (35%)\n");
+        System.out.print("    • MIDTERM LAB EXAM: ");
+        double labExamGrade = input.nextDouble();
+
+        System.out.print("    • MIDTERM LAB PERFORMANCE TASK: ");
+        double performanceTaskGrade = input.nextDouble();
+
+        totalLabExam = ((labExamGrade + performanceTaskGrade) / 2) * MIDTERM_EXAM_PERCENT;
+
+        System.out.println("\n    >> Total Laboratory Exam: " + (float)totalLabExam);
+
+
+
+        // Input for Lecture Grade
+        System.out.println("\n  _________________________________________________");
+
+        System.out.print("\n\n    D.) LECTURE GRADE (between 0-100): ");
+        System.out.print("\n\n    • ENTER INPUT HERE: ");
+        double lectureGrade = input.nextDouble();
+        System.out.println("\n  _________________________________________________");
+
+
+        // Calculate and print the Lab Grade (TOTAL)
+        double labGrade = totalActivities + totalClassStanding + totalLabExam;
+        System.out.println("\n\n       >> TOTAL LABORATORY GRADE = " + (float)labGrade+ "%");
+
+
+
+
+        // Calculate and print the Total Midterm Grade
+        double midtermGrade = (lectureGrade * 0.60) + (labGrade * 0.40);
+        System.out.println("       >> TOTAL MIDTERM GRADE = " + (float)midtermGrade + "%");
+       System.out.println("\n  _________________________________________________");
+      System.out.println ("\n        CPEPROG 3 LABORATORY");
+        System.out.println ("      A.Y. 2023- 2024 | BSCPE 2C");
+        System.out.println ("\n\n\n\n");
+
+
+        input.close(); // End/ Close Scanner
+    }
+}
+
