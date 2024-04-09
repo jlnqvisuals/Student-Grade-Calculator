@@ -38,16 +38,6 @@
 >This program serves as a valuable tool for students enrolled in the Data Structure course at Colegio de Montalban. By automating the grade calculation process, it eliminates manual errors and provides students with instant feedback on their academic progress. Through its user-friendly interface and efficient algorithms, the program facilitates a more streamlined and organized approach to grade management.
 
 -------------------------------------
-## SOURCE CODE
-
->The program stores the first operand (F), the second operand (S), and the selected operator (Opt) to perform calculations.
-It handles various scenarios such as decimal input, calculation of percentages, and changing the sign of numbers.
-Users can input numbers and perform calculations using the provided interface buttons.
-The program includes error handling to prevent unexpected behavior during calculations.
-It offers a clear button (Clear) to reset the calculator and start a new calculation.
-
-
--------------------------------------
 ## OTHER INFORMATION
 
 |**Creator:** | QUILINO, JOHN LLOYD N. _(Bachelor of Science in Computer Engineering)_ |
